@@ -10,7 +10,6 @@ public class Comunidad  { //creamos la clase Comunidad
         for(int i =0; i<4; i++) {
             drenajes[i]= 0;
         }
-        
     }
 
 	public Comunidad(String nom, int per){
@@ -69,6 +68,28 @@ public class Comunidad  { //creamos la clase Comunidad
         return drenajes[posicion];
     }    
 
+	/*
+	 * Calcular la vida útil de drenaje con base a los mantenimientos
+	 */
+	public String vidaUtilDrenajes(){
+		// Con la cantidad de mantimientos
+		int mantenimientos = 2;//cantMantenimientos(); 
+		int vidaUtilPromedio = 10; 
+		float cambios = mantenimientos*100/vidaUtilPromedio;
+		if(cambios >= 75 ){
+			String mensaje = "La vida útil está en un 75%";
+			return mensaje;}
+		if(cambios < 75 && cambios >= 50 ){
+			String mensaje = "La vida útil está en un 50%";
+			return mensaje;}
+		if(cambios < 50 && cambios >= 25 ){
+			String mensaje = "La vida útil está en un 25%\nEste es un estado de Alerta. ";
+			return mensaje;}
+		if(cambios < 25){
+			String mensaje = "La vida útil está llegando a su fin.\nEn los siguientes meses debe considerar cambiar o dar un mantenimeinto fuerte al sistema";	
+			return mensaje;}
+	
+	}
 
 	
 	/** 
