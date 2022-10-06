@@ -1,6 +1,7 @@
 public class Comunidad  { //creamos la clase perro
     private int personas;
     private String nombre;
+    private ArrayList<Familia> familias;
     private int[] drenajes = new int[3]; 
 
 	public Comunidad() {
