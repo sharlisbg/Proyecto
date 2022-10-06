@@ -1,4 +1,4 @@
-public class Comunidad  { //creamos la clase perro
+public class Comunidad  { //creamos la clase Comunidad
     private int personas;
     private String nombre;
     private ArrayList<Familia> familias;
@@ -18,28 +18,70 @@ public class Comunidad  { //creamos la clase perro
 		personas = per;
 	}
 
+	
+	/** 
+	 * @return int
+	 */
 	public int getPersonas() {
 		return this.personas;
 	}
 
+	
+	/** 
+	 * @param personas
+	 */
 	public void setPersonas(int personas) {
 		this.personas = personas;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	public String getNombre() {
 		return this.nombre;
 	}
 
+	
+	/** 
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+	
+	/** 
+	 * @param capacidad
+	 * @param posicion
+	 */
 	public void setDrenajes(int capacidad, int posicion){
         drenajes[posicion] = capacidad;
     }
 
 
-    public int getDrenajes(int posicion){
+    
+	/** 
+	 * @param posicion
+	 * @return int
+	 */
+	public int getDrenajes(int posicion){
         return drenajes[posicion];
     }    
+
+
+	
+	/** 
+	 * @return String
+	 */
+	@Override
+	public String toString() {
+		return "{" +
+			" personas='" + getPersonas() + "'" +
+			", nombre='" + getNombre() + "'" +
+			", familias='" + getFamilias() + "'" +
+			", drenajes='" + getDrenajes() + "'" +
+			"}";
+	}
+
 }
