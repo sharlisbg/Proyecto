@@ -1,4 +1,4 @@
-public class Comunidad  { //creamos la clase perro
+public class Comunidad  { //creamos la clase comunidad
     private int personas;
     private String nombre;
     private int[] drenajes = new int[3]; 
